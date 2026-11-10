@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FilaZero - Cardápio</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topo">
+
+    <div class="logo">
+        🍴 FilaZero
+    </div>
+
+    <div class="usuario">
+
+        <a href="/">
+            Início
+        </a>
+
+        <a href="meus-pedidos.html">
+            Meus pedidos
+        </a>
+
+        <a href="/logout">
+            Sair
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main class="pagina">
+
+
+    <section class="boas-vindas">
+
+        <h1>
+            Cardápio 🍔
+        </h1>
+
+        <p>
+            Escolha os produtos que deseja pedir.
+        </p>
+
+    </section>
+
+
+    <div
+        id="cardapio"
+        class="produtos"
+    >
+
+        <p>
+            Carregando cardápio...
+        </p>
+
+    </div>
+
+
+</main>
+
+
+<div
+    id="carrinho"
+    class="carrinho"
+>
+
+    <div>
+
+        <strong>
+            🛒 Carrinho
+        </strong>
+
+        <span id="quantidadeCarrinho">
+            0 itens
+        </span>
+
+    </div>
+
+
+    <strong id="totalCarrinho">
+        R$ 0,00
+    </strong>
+
+
+    <button
+        onclick="irParaPedido()"
+    >
+        Ver pedido
+    </button>
+
+</div>
+
+
+<script src="js/cardapio.js"></script>
+
+</body>
+
+</html>

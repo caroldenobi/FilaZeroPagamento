@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>FilaZero - Cadastro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="login-left">
+
+            <div class="logo">
+                FilaZero
+            </div>
+
+            <div class="texto">
+
+                <h1>
+                    Faça parte
+                    <br>
+                    do FilaZero!
+                </h1>
+
+                <p>
+                    Cadastre-se e facilite seus pedidos na cantina.
+                </p>
+
+            </div>
+
+            <div class="ilustracao">
+
+                <img src="./img/image copy.png" alt="logo-imagem">
+
+            </div>
+
+        </div>
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="login-right">
+
+            <div class="cadastro-box">
+
+                <h2>
+                    Criar minha conta
+                </h2>
+
+                <p>
+                    Preencha seus dados para começar.
+                </p>
+
+
+                <form id="formCadastro">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+
+                    <label for="matricula">
+                        Matrícula
+                    </label>
+
+                    <input
+                        type="text"
+                        id="matricula"
+                        placeholder="Digite sua matrícula"
+                        required
+                    >
+
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Crie uma senha"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        placeholder="Digite sua senha novamente"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Cadastrar
+                    </button>
+
+
+                    <p id="mensagemCadastro"></p>
+
+                </form>
+
+
+                <div class="voltar-login">
+
+                    <p>
+                        Já possui uma conta?
+                    </p>
+
+                    <a href="login.html">
+                        Voltar para o login
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/cadastro.js"></script>
+
+</body>
+
+</html>

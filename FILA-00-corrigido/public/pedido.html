@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FilaZero - Meu pedido</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="topo">
+
+    <div class="logo">
+        🍴 FilaZero
+    </div>
+
+
+    <div class="usuario">
+
+        <a href="cardapio.html">
+            Cardápio
+        </a>
+
+        <a href="meus-pedidos.html">
+            Meus pedidos
+        </a>
+
+        <a href="/logout">
+            Sair
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main class="pagina pedido-pagina">
+
+
+    <section class="boas-vindas">
+
+        <h1>
+            Seu pedido 🛒
+        </h1>
+
+        <p>
+            Confira os produtos antes de confirmar.
+        </p>
+
+    </section>
+
+
+
+    <section class="pedido-container">
+
+
+        <div>
+
+            <h2>
+                Produtos
+            </h2>
+
+
+            <div id="listaPedido">
+
+                Carregando...
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resumo-pedido">
+
+
+            <h2>
+                Resumo
+            </h2>
+
+
+            <div class="linha">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <label>Forma de pagamento</label>
+            <div class="formas-pagamento" role="radiogroup" aria-label="Forma de pagamento">
+                <label class="opcao-pagamento"><input type="radio" name="formaPagamento" value="pix" checked> <span>🔑 Pix</span></label>
+                <label class="opcao-pagamento"><input type="radio" name="formaPagamento" value="cartao"> <span>💳 Cartão</span></label>
+                <label class="opcao-pagamento"><input type="radio" name="formaPagamento" value="retirada"> <span>💵 Pagar na retirada</span></label>
+            </div>
+            <div id="dadosPix">
+                <label for="nomePagador">Nome de quem fará o Pix</label>
+                <input id="nomePagador" type="text" maxlength="100" autocomplete="name" placeholder="Nome completo">
+                <label for="cpfPagador">CPF de quem fará o Pix</label>
+                <input id="cpfPagador" type="text" inputmode="numeric" maxlength="14" autocomplete="off" placeholder="000.000.000-00">
+                <small class="texto-privacidade">O CPF é enviado ao Mercado Pago para processar o Pix e não é salvo no banco do FilaZero.</small>
+            </div>
+            <p id="avisoCartao" class="texto-privacidade" hidden>Você será direcionado ao ambiente seguro do Mercado Pago para pagar com cartão.</p>
+            <p id="avisoRetirada" class="texto-privacidade" hidden>Seu pedido será enviado à cantina. O pagamento será feito no balcão, no momento da retirada.</p>
+
+            <label for="horario">
+
+                Horário para retirada
+
+            </label>
+
+
+            <select id="horario">
+
+                <option value="">
+                    Selecione um horário
+                </option>
+
+                <option value="10:00">
+                    10:00
+                </option>
+
+                <option value="10:30">
+                    10:30
+                </option>
+
+                <option value="11:00">
+                    11:00
+                </option>
+
+                <option value="11:30">
+                    11:30
+                </option>
+
+                <option value="12:00">
+                    12:00
+                </option>
+
+                <option value="12:30">
+                    12:30
+                </option>
+
+                <option value="13:00">
+                    13:00
+                </option>
+
+                <option value="13:30">
+                    13:30
+                </option>
+
+            </select>
+
+
+            <button
+                id="confirmar"
+                onclick="confirmarPedido()"
+            >
+
+                Confirmar pedido
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+    <section id="pedidoCriado" class="pix-container" hidden><div class="pix-conteudo"><h2>Pedido recebido! 💚</h2><p id="pedidoCriadoTexto">Seu pedido foi enviado à cantina.</p><a href="meus-pedidos.html">Acompanhar meus pedidos</a></div></section>
+
+    <section id="pixContainer" class="pix-container" hidden>
+        <div class="pix-conteudo">
+            <h2>Pagamento via Pix</h2>
+            <p>Escaneie o QR Code pelo aplicativo do seu banco ou copie o código Pix.</p>
+            <img id="pixImagem" alt="QR Code Pix para pagamento" class="pix-imagem">
+            <label for="pixCodigo">Pix copia e cola</label>
+            <textarea id="pixCodigo" readonly rows="4"></textarea>
+            <button type="button" id="copiarPix">Copiar código Pix</button>
+            <p id="pixExpiracao" class="pix-expiracao"></p>
+            <div id="pixStatus" class="pix-status">Aguardando pagamento...</div>
+            <p class="pix-aviso">Não feche esta página até o banco confirmar o pagamento. O pedido só será enviado à cantina após a confirmação.</p>
+            <a id="irPedidos" href="meus-pedidos.html" hidden>Ver meus pedidos</a>
+        </div>
+    </section>
+
+</main>
+
+
+<script src="js/pedido.js"></script>
+
+
+</body>
+
+</html>

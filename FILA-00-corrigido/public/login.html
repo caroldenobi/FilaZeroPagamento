@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>FilaZero - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- LADO ESQUERDO -->
+        <div class="login-left">
+
+            <div class="logo">
+                FilaZero
+            </div>
+
+            <div class="texto">
+
+                <h1>
+                    Peça seu lanche
+                    <br>
+                    sem enfrentar fila.
+                </h1>
+
+                <p>
+                    Faça seu pedido pelo FilaZero!
+                </p>
+
+            </div>
+
+            <div class="ilustracao">
+                <img src="./img/image copy.png" alt="logo-imagem">
+            </div>
+
+        </div>
+
+
+        <!-- LADO DIREITO -->
+        <div class="login-right">
+
+            <div class="login-box">
+
+                <h2>
+                    Bem-vindo!
+                </h2>
+
+                <p>
+                    Entre na sua conta para continuar.
+                </p>
+
+
+                <form id="formLogin">
+
+                    <label for="email">
+                        E-mail ou matrícula
+                    </label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="Digite seu e-mail ou matrícula"
+                        required
+                    >
+
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                    <div class="opcao-cadastro">
+                        <p>Não possui uma conta?</p>
+                        <a href="cadastro.html" class="botao-cadastro">
+                            Criar minha conta
+                        </a>
+                    </div>
+
+
+                    <p
+                        id="mensagem"
+                        style="margin-top: 15px;"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

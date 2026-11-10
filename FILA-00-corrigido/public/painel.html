@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FilaZero - Painel da Cantina</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="topo">
+
+    <div class="logo">
+        🍴 FilaZero
+    </div>
+
+    <div class="usuario">
+
+        <strong>
+            🏪 Cantina
+        </strong>
+
+        <a href="/logout">
+            Sair
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="pagina">
+
+    <section class="boas-vindas">
+
+        <h1>
+            Pedidos da Cantina 📋
+        </h1>
+
+        <p>
+            Acompanhe e atualize os pedidos recebidos.
+        </p>
+
+    </section>
+
+
+    <div class="filtros">
+
+    <a
+        href="produtos.html"
+        class="botao-link"
+    >
+        🍔 Gerenciar cardápio
+    </a>
+
+
+    <button
+        onclick="carregarPedidos()"
+    >
+        🔄 Atualizar
+    </button>
+
+    </div>
+
+
+    <div
+        id="listaPedidos"
+        class="pedidos-cantina"
+    >
+
+        Carregando pedidos...
+
+    </div>
+
+</main>
+
+
+<script src="js/painel.js"></script>
+
+</body>
+
+</html>
